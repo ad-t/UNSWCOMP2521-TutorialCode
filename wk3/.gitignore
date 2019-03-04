@@ -1,0 +1,5 @@
+# ignore given files
+*.given
+
+# ignore compiled binaries
+bst
