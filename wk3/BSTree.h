@@ -18,7 +18,7 @@ typedef struct Tree {
 typedef int Item;
 
 Tree* newTree();
-void insertItem(Item item);
-int countInternal(Tree t);
-int nodeDepth(Tree t, Item key);
-int maxBranchLen(Tree t);
+void insertItem(Tree* t, Item item);
+int countInternal(Tree* t);
+int nodeDepth(Tree* t, Item key);
+int maxBranchLen(Tree* t);
