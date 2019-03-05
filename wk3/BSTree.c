@@ -97,7 +97,7 @@ int maxBranchLenRecursive(Tree* t, unsigned int depth) {
   }
   int maxDepthLeft = maxBranchLenRecursive(t->left, depth + 1);
   int maxDepthRight = maxBranchLenRecursive(t->right, depth + 1);
-  return maxDepthLeft < maxDepthRight ? maxDepthLeft + 1 : maxDepthRight + 1;
+  return maxDepthLeft > maxDepthRight ? maxDepthLeft : maxDepthRight;
 }
 
 int maxBranchLen(Tree *t) {
@@ -106,5 +106,5 @@ int maxBranchLen(Tree *t) {
   } 
   int maxDepthLeft = maxBranchLenRecursive(t->left, 1);
   int maxDepthRight = maxBranchLenRecursive(t->right, 1);
-  return maxDepthLeft < maxDepthRight ? maxDepthLeft + 1 : maxDepthRight + 1;
+  return maxDepthLeft > maxDepthRight ? maxDepthLeft + 1 : maxDepthRight + 1;
 }
